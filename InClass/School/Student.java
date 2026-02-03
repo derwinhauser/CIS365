@@ -7,10 +7,10 @@ public class Student extends Person {
     // properties
     private String studentId;
     private String major;
-    private ArrayList<String> courses;
+    private ArrayList<Course> courses;
 
     // constructor
-    public Student(String name, int age, String studentId, String major, ArrayList<String> courses) {
+    public Student(String name, int age, String studentId, String major, ArrayList<Course> courses) {
         super(name, age);
         this.studentId = studentId;
         this.major = major;
@@ -26,14 +26,14 @@ public class Student extends Person {
         return major;
     }
 
-    public ArrayList<String> getCourses() {
+    public ArrayList<Course> getCourses() {
         return courses;
     }
 
     private void printCourses() {
         System.out.println("Courses enrolled:");
-        for (String course : courses) {
-            System.out.println("- " + course);
+        for (Course course : courses) {
+            System.out.println("- " + course.getTitle());
         }
     }
 
@@ -42,6 +42,11 @@ public class Student extends Person {
         super.showInfo();
         System.out.println("Student ID: " + studentId);
         System.out.println("Major: " + major);
-        System.out.println("Courses: " + courses);
+        printCourses();
+    }
+
+    public void enrollCourse(Course course) {
+        courses.add(course);
+        System.out.println("Enrolled in course: " + course);
     }
 }
