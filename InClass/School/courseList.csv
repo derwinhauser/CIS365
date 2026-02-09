@@ -1,4 +1,4 @@
-courseID,courseTitle,courseInfo,
-"MATH101", "Mathematics", "Intro to Math",
-"PHYS201", "Physics", "Intro to Physics",
-"CS301", "Programming", "Intro to Programming",
+"MATH101","Mathematics","Intro to Math",
+"PHYS201","Physics","Intro to Physics",
+"CS301","Programming","Intro to Programming",
+"CIS232","Test","Test Class"
